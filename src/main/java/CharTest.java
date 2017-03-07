@@ -4,11 +4,11 @@
  */
 public class CharTest {
     public static void main(String[] args) {
-        char c1 = 123;
-        System.out.println(c1);
+        char c1 = 123; // ascii
+        System.out.println((int)c1); // 强制类型转换
 
         char c2 = '中';
-        System.out.println(c2);
+        System.out.println((int)c2); // unicode
 
         char c3 = '\123'; // 八进制 0-7 123 = 8^2*1 + 8^1*2 + 8^0*3 = 64 + 16 + 3 = 83
         System.out.println(c3);
