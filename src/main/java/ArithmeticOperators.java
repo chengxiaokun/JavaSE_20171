@@ -33,6 +33,9 @@ public class ArithmeticOperators { //
         int m = -1000;
         int n = -300;
 
+        // 判断整除
         System.out.println(m % n); // 求余
+
+        // 3 billion devices use Java
     }
 }
