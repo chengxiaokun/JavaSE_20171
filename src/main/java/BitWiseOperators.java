@@ -1,3 +1,5 @@
+import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
+
 /**
  * Created by mingfei.net@gmail.com
  * 3/7/17 15:39
@@ -9,16 +11,20 @@ public class BitWiseOperators {
         // 00000000
         // 2^31 - 1  -2^31
 
-        int x = -1;
+        int x = 1;
         int y = 1;
 
-        System.out.println(x >>> y); // 按位与 按位左移
+//        System.out.println(x >>> y); // 按位与 按位左移
+        System.out.println(~x);
 
-
-        // 000..01   100
+        System.out.println(Integer.toBinaryString(-2));
+        // 000..01 ~ 111...10 -2
         // 000..10
         //      00
         //      11
         //      11
+
+//        2 -2
+        // 000...10 111...01 111...10
     }
 }
