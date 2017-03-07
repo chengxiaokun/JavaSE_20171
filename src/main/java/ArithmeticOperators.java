@@ -2,7 +2,7 @@
  * Created by mingfei.net@gmail.com
  * 3/7/17 11:32
  */
-public class ArithmeticOperators {
+public class ArithmeticOperators { //
     public static void main(String[] args) {
         int x = 1; // integer
         int y = 2;
@@ -18,5 +18,21 @@ public class ArithmeticOperators {
         System.out.println(x / d2);
 
         System.out.println(d1 / y);
+
+        String s1 = "hi";
+        String s2 = "hello";
+
+        System.out.println(x + y + s1 + d1);
+
+        int i = 1;
+        // i-- i = i - 1;
+
+        System.out.println(i--); // i++  ++i
+        System.out.println(i);
+
+        int m = -1000;
+        int n = -300;
+
+        System.out.println(m % n); // 求余
     }
 }
