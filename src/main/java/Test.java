@@ -7,3 +7,6 @@ public class Test {
         System.out.println("hi...");
     }
 }
+// show in explorer
+
+// Test test hello hi123 123hi hi- hi_ _hi _$ $_  a bc 中
