@@ -4,7 +4,7 @@
  */
 public class ArithmeticOperators { //
     public static void main(String[] args) {
-        int x = 1; // integer
+        int x = 1; // integer ==
         int y = 2;
         int z = 5 / 7;
 
