@@ -4,10 +4,17 @@
  */
 public class IfTest {
     public static void main(String[] args) {
-        int grade = 50; // n.\ 年级；等级；成绩；级别；阶段
+        int grade = 90; // n.\ 年级；等级；成绩；级别；阶段
+        if (grade >= 85) {
+            System.out.println("优秀。");
+        }
+        if (grade >= 75) {
+            System.out.println("良好。");
+        }
         if (grade >= 60) {
             System.out.println("及格。");
-            System.out.println("测试。。。");
+        } else { // adv.\ 其他；否则；另外
+            System.out.println("不及格。。。");
         }
     }
 }
