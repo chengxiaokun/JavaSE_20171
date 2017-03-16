@@ -12,16 +12,16 @@ public class Oop2 {
 
 class Cube {
     double length;
-    double width;
-    double height;
+    private double width;
+    private double height;
 
-    public Cube(double length, double width, double height) {
+    Cube(double length, double width, double height) {
         this.length = length;
         this.width = width;
         this.height = height;
     }
 
-    public double getVolume() {
+    double getVolume() {
         return  length * width * height;
     }
 }
