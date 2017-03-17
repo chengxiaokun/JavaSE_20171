@@ -1,4 +1,4 @@
-package java1702.javase.basic;
+package java1702.javase.exercise;
 
 /**
  * Created by mingfei.net@gmail.com
@@ -17,7 +17,7 @@ public class E22 {
     }
 
     public static void main(String[] args) {
-//        java1702.javase.basic.E22 e22 = new java1702.javase.basic.E22();
+//        java1702.javase.exercise.E22 e22 = new java1702.javase.exercise.E22();
 //        System.out.println(e22.get(16));
 
         int result = 1;

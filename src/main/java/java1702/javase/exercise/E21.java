@@ -1,4 +1,4 @@
-package java1702.javase.basic;
+package java1702.javase.exercise;
 
 import sun.plugin2.message.GetAppletMessage;
 
@@ -19,7 +19,7 @@ public class E21 {
     }
 
     public static void main(String[] args) {
-//        java1702.javase.basic.E21 e21 = new java1702.javase.basic.E21();
+//        java1702.javase.exercise.E21 e21 = new java1702.javase.exercise.E21();
 //        long sum = 0;
 //        for (int i = 1; i < 21; i++) {
 //            sum += e21.get(i);

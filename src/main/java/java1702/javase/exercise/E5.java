@@ -1,4 +1,4 @@
-package java1702.javase.basic;
+package java1702.javase.exercise;
 
 import java.util.Scanner;
 

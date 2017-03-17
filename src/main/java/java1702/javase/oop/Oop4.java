@@ -1,4 +1,4 @@
-package java1702.javase.basic;
+package java1702.javase.oop;
 
 /**
  * Created by mingfei.net@gmail.com
