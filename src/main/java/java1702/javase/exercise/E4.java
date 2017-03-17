@@ -30,7 +30,7 @@ public class E4 {
         // Ctrl + Alt + T
 
         E4 e4 = new E4();
-        int n = 10000;
+        int n = 6;
         System.out.print(n + " = ");
         e4.get(n);
     }

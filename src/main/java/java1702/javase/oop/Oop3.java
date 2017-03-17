@@ -24,8 +24,20 @@ class Person {
     private char gender;
     private int age;
 
-//    setters and getters
+    public Person() {
+    }
 
+    public Person(String name, char gender) {
+        this.name = name;
+        this.gender = gender;
+    }
+
+    public Person(String name) {
+
+        this.name = name;
+    }
+
+    //    setters and getters
 
     public String getName() {
         return name;
