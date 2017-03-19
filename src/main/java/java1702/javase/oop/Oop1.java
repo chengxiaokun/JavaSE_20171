@@ -6,6 +6,7 @@ import java.util.Scanner;
  * Created by mingfei.net@gmail.com
  * 3/15/17 17:01
  */
+
 // 闰年 西元年份除以400余数为0的,或者除以4余数为0且除以100余数不为0的,为闰年
 public class Oop1 extends Object {
 

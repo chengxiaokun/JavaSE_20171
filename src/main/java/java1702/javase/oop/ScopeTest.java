@@ -8,8 +8,9 @@ package java1702.javase.oop;
 // scope 范围
 public class ScopeTest {
     public void method() {
-        int i = 1;
-        System.out.println(this.i);
+        int i = 1; // syntax error; logical error
+        //.....
+        System.out.println(i);
     }
 
     private int i;
@@ -19,13 +20,15 @@ public class ScopeTest {
         scopeTest.method();
     }
 
-    public void exceptionTest() {
+    public void exceptionTest() { // *****
+        String s;
         try {
-            String s = "hello";
+            s = "hello";
         } catch (Exception e) {
 
         } finally {
             s = "hi";
         }
     }
+
 }
