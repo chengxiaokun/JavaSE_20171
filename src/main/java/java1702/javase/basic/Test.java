@@ -6,7 +6,7 @@ import java1702.javase.oop.DefaultClass;
  * Created by user
  */
 
-public class Test {
+public class Test extends DefaultClass {
     public static void main(String[] args) {
 //        Human tom = new Human(); // 【new + 一个类的构造方法】 对象 实例 实例对象 object instance
 //        System.out.println(tom.name); // name null
@@ -21,5 +21,10 @@ public class Test {
 //        String s = new String("test"); // "test";
 
         DefaultClass defaultClass = new DefaultClass();
+//        System.out.println(defaultClass.i); // 0
+//        defaultClass.method();
+
+        Test test = new Test();
+        test.method();
     }
 }

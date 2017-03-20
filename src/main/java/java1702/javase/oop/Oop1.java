@@ -33,5 +33,7 @@ public class Oop1 extends Object {
 //        }
         DefaultClass defaultClass = new DefaultClass();
         System.out.println(defaultClass.toString()); // 隐式调用了 Object 的 toString 方法
+//        System.out.println(defaultClass.i);
+        defaultClass.method();
     }
 }
