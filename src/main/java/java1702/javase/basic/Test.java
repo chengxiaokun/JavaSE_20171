@@ -1,6 +1,7 @@
 package java1702.javase.basic;
 
 import java1702.javase.oop.DefaultClass;
+import java1702.javase.oop.NewSuperClass;
 import java1702.javase.oop.SubClass;
 
 /**
@@ -31,11 +32,14 @@ public class Test extends DefaultClass {
     }
 }
 
-class ExtendsTest {
+class ExtendsTest extends NewSuperClass {
     public static void main(String[] args) {
         SubClass subClass = new SubClass();
-        System.out.println(subClass.i); // ?
+//        System.out.println(subClass.i); // ?
         subClass.m1();
         subClass.m2();
+
+        ExtendsTest extendsTest = new ExtendsTest();
+        System.out.println(extendsTest.i);
     }
 }

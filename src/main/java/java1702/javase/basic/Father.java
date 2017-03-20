@@ -27,26 +27,26 @@ class Grandson extends Son {
 
 }
 
-class ExtendsTest {
-    public static void main(String[] args) {
-        Father father = new Father();
-        System.out.println(father.money); //
-        father.coding();
-
-        Son son = new Son();
-        System.out.println(son.money); //
-        son.coding();
-
-        System.out.println(son.toy); // null
-        son.study();
-
-        Grandson grandson = new Grandson();
-        System.out.println(grandson.toy);
-        System.out.println(grandson.money);
-        grandson.study();
-        grandson.coding();
-
-        System.out.println(son instanceof Grandson);
-        // cast 类型转换
-    }
-}
+//class ExtendsTest {
+//    public static void main(String[] args) {
+//        Father father = new Father();
+//        System.out.println(father.money); //
+//        father.coding();
+//
+//        Son son = new Son();
+//        System.out.println(son.money); //
+//        son.coding();
+//
+//        System.out.println(son.toy); // null
+//        son.study();
+//
+//        Grandson grandson = new Grandson();
+//        System.out.println(grandson.toy);
+//        System.out.println(grandson.money);
+//        grandson.study();
+//        grandson.coding();
+//
+//        System.out.println(son instanceof Grandson);
+//        // cast 类型转换
+//    }
+//}
