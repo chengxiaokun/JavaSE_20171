@@ -1,6 +1,7 @@
 package java1702.javase.basic;
 
 import java1702.javase.oop.DefaultClass;
+import java1702.javase.oop.SubClass;
 
 /**
  * Created by user
@@ -27,5 +28,14 @@ public class Test extends DefaultClass {
         Test test = new Test();
         test.method();
 
+    }
+}
+
+class ExtendsTest {
+    public static void main(String[] args) {
+        SubClass subClass = new SubClass();
+        System.out.println(subClass.i); // ?
+        subClass.m1();
+        subClass.m2();
     }
 }

@@ -2,7 +2,8 @@ package java1702.javase.oop;
 
 /**
  * Created by mingfei.net@gmail.com
- * 3/17/17 14:19
+ * 3/20/17 15:19
+ * JavaSE_20171
  */
-public class Test {
+public class SuperClass {
 }
