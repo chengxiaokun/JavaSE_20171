@@ -10,8 +10,11 @@ public final class FinalTest {
 
     private final int i;
 
-    public FinalTest(int i) {
+    private  double d = 1d;
+
+    public FinalTest(int i, double d) {
         this.i = i;
+        this.d = d;
     }
 
     public FinalTest() {
