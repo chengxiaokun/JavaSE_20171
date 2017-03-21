@@ -1,5 +1,7 @@
 package java1702.javase.exercise;
 
+import java.text.NumberFormat;
+import java.util.Date;
 import java.util.Random;
 
 /**
@@ -30,5 +32,10 @@ public class E34 {
 //        System.out.println(end - start);
 
         System.out.println(System.currentTimeMillis());
+
+//        System.out.println((1500000000000L - System.currentTimeMillis()) / 1000 / 60 / 60 / 24);
+
+        System.out.println(new Date(1500000000000L));
+
     }
 }
