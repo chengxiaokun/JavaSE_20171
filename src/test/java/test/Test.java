@@ -19,8 +19,8 @@ public class Test {
     private static final String SUFFIX = "</table></body></html>";
 
     public static void main(String[] args) throws IOException {
-        BufferedImage bufferedImage = ImageIO.read(new File("doc/rabbit.jpeg"));
-        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("doc/1.html"))) {
+        BufferedImage bufferedImage = ImageIO.read(new File("doc/1.jpg"));
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("doc/map.html"))) {
             bufferedWriter.write(PREFIX);
             for (int i = 0; i < bufferedImage.getHeight(); i++) {
                 bufferedWriter.write("<tr>");
