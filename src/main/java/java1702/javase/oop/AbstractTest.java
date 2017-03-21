@@ -13,4 +13,19 @@ public abstract class AbstractTest { // 抽象类
     private int i; // modifier 修饰符\ ['mɒdɪfaɪə]
 
     public abstract void method();
+
+    public static void main(String[] args) {
+//        AbstractTest abstractTest = new AbstractTest(); // instantiated 实例化
+        SubAbstractTest subAbstractTest = new SubAbstractTest();
+        System.out.println(subAbstractTest); // java1702.javase.oop.SubAbstractTest@...
+        subAbstractTest.method();
+    }
+}
+
+class SubAbstractTest extends AbstractTest {
+    // implement 实现
+    @Override
+    public void method() {
+        System.out.println("in SubAbstractTest...");
+    }
 }
