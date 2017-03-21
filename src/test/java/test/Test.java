@@ -3,7 +3,9 @@ package test;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 
 /**
@@ -12,23 +14,26 @@ import java.io.IOException;
  * JavaSE_20171
  */
 public class Test {
+
+    private static final String PREFIX = "<html><head><style>table{border-collapse:collapse;}</style></head><body><table>";
+    private static final String SUFFIX = "</table></body></html>";
+
     public static void main(String[] args) throws IOException {
-        BufferedImage bufferedImage = ImageIO.read(new File("doc/1.png"));
-        int[][] matrix = new int[bufferedImage.getHeight()][bufferedImage.getWidth()];
-
-//        for (int i = 0; i < bufferedImage.getWidth(); i++) {
-//            for (int j = 0; j < bufferedImage.getHeight(); j++) {
-//                System.out.print(bufferedImage.getRGB(i, j) + "\t");
-//            }
-//            System.out.println();
-//        }
-
-        Color color = new Color(bufferedImage.getRGB(0, 0));
-        System.out.println(getBackgroundColorStyle(color));
-
+        BufferedImage bufferedImage = ImageIO.read(new File("doc/rabbit.jpeg"));
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("doc/1.html"))) {
+            bufferedWriter.write(PREFIX);
+            for (int i = 0; i < bufferedImage.getHeight(); i++) {
+                bufferedWriter.write("<tr>");
+                for (int j = 0; j < bufferedImage.getWidth(); j++) {
+                    bufferedWriter.write(getBackgroundColorStyle(new Color(bufferedImage.getRGB(j, i))));
+                }
+                bufferedWriter.write("</tr>");
+            }
+            bufferedWriter.write(SUFFIX);
+        }
     }
 
     private static String getBackgroundColorStyle(Color color) {
-        return "style='background:rgb(" + color.getRed() + "," + color.getGreen() + "," + color.getBlue() + "')";
+        return "<td style='background:rgb(" + color.getRed() + "," + color.getGreen() + "," + color.getBlue() + ")'></td>";
     }
 }
