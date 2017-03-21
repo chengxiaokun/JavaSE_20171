@@ -24,9 +24,11 @@ public class Test {
 //        }
 
         Color color = new Color(bufferedImage.getRGB(0, 0));
-        System.out.println(color.getAlpha());
-        System.out.println(color.getRed());
-        System.out.println(color.getGreen());
-        System.out.println(color.getBlue());
+        System.out.println(getBackgroundColorStyle(color));
+
+    }
+
+    private static String getBackgroundColorStyle(Color color) {
+        return "style='background:rgb(" + color.getRed() + "," + color.getGreen() + "," + color.getBlue() + "')";
     }
 }
