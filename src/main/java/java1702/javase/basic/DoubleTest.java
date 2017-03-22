@@ -14,9 +14,14 @@ public class DoubleTest {
 //        System.out.println(10 - 9);
 //        System.out.println((10d - 9d) / 10);
 
-        BigDecimal bigDecimal1 = new BigDecimal("1.0");
-        BigDecimal bigDecimal2 = new BigDecimal("0.9");
+        double d1 = 1.0d;
+        double d2 = 0.9d;
 
-        System.out.println(bigDecimal2.divide(bigDecimal1));
+//        System.out.println(String.valueOf(d1) + String.valueOf(d2));
+
+        BigDecimal bigDecimal1 = new BigDecimal(String.valueOf(d1));
+        BigDecimal bigDecimal2 = new BigDecimal(String.valueOf(d2));
+//
+        System.out.println(bigDecimal1.subtract(bigDecimal2));
     }
 }
