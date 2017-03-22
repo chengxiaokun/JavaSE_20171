@@ -14,6 +14,7 @@ public class EE1 {
 
     private static int x;
     private static int counter;
+    private static String result;
 
     public static void main(String[] args) {
         Random random = new Random();
@@ -23,16 +24,20 @@ public class EE1 {
     }
 
     private static void guess() {
-        System.out.println("请输入一个数：");
-        Scanner scanner = new Scanner(System.in);
-        int y = scanner.nextInt();
+//        System.out.println("请输入一个数：");
+//        Scanner scanner = new Scanner(System.in);
+//        int y = scanner.nextInt();
+
+        int y = ai( result);
 
         if (y > x) {
             System.out.println("大了");
             counter++;
+            result = "大了";
             guess();
         } else if (y < x) {
             System.out.println("小了");
+            result = "小了";
             counter++;
             guess();
         } else {
@@ -41,11 +46,17 @@ public class EE1 {
             System.out.println(counter);
         }
     }
+
+    private static int ai(String result) {
+        // ...
+        return 0;
+    }
 }
 
 //  -123456789
 
 //-21亿----- -10亿---- -5亿---0-------------21亿
+// 查找算法 折半查找
 
 
 
