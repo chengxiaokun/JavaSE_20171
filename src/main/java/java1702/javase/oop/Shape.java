@@ -25,11 +25,12 @@ class CircleTest extends Shape {
 
     @Override
     public double getPerimeter() {
-        return 2 * pi * radius;
+        return 2 * Math.PI * radius;
     }
 
     @Override
     public double getArea() {
+        Math math = new Math();
         return pi * Math.pow(radius, 2);
     }
 }
@@ -71,10 +72,15 @@ class Quadrangle extends Shape {
     private double d;
 
     public Quadrangle(double a, double b, double c, double d) {
-        this.a = a;
-        this.b = b;
-        this.c = c;
-        this.d = d;
+        if ((a + b + c > d) && (b + c + d > a) && (c + d + a > b) && (d + a + b > c)) {
+            this.a = a;
+            this.b = b;
+            this.c = c;
+            this.d = d;
+        } else {
+            System.out.println("error.");
+            System.exit(0);
+        }
     }
 
     @Override

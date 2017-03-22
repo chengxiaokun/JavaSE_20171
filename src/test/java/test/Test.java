@@ -7,6 +7,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.rmi.StubNotFoundException;
 
 /**
  * Created by mingfei.net@gmail.com
@@ -15,12 +16,12 @@ import java.io.IOException;
  */
 public class Test {
 
-    private static final String PREFIX = "<html><head><style>table{border-collapse:collapse;}</style></head><body><table>";
+    private static final String PREFIX = "<html><head><style>table{border-collapse:collapse;}td{padding:0;width:1px;height:1px;}</style></head><body><table>";
     private static final String SUFFIX = "</table></body></html>";
 
     public static void main(String[] args) throws IOException {
-        BufferedImage bufferedImage = ImageIO.read(new File("doc/1.jpg"));
-        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("doc/map.html"))) {
+        BufferedImage bufferedImage = ImageIO.read(new File("doc/3.jpeg"));
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("doc/3.html"))) {
             bufferedWriter.write(PREFIX);
             for (int i = 0; i < bufferedImage.getHeight(); i++) {
                 bufferedWriter.write("<tr>");
