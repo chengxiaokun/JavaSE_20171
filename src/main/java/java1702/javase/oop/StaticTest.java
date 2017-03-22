@@ -1,5 +1,6 @@
 package java1702.javase.oop;
 
+import static java.lang.System.out; // JDK 1.5
 /**
  * Created by mingfei.net@gmail.com
  * 3/22/17 08:47
@@ -29,19 +30,18 @@ public class StaticTest {
 //        tom.name = "Tom";
         tom.age = 18;
         ManKind.earth = "tom 种了一棵树";
-        System.out.println(tom.name);
-        System.out.println(tom.age);
-        System.out.println(ManKind.earth);
-
-        System.out.println("--------------");
+        out.println(tom.name);
+        out.println(tom.age);
+        out.println(ManKind.earth);
+        out.println("--------------");
 
         ManKind jerry = new ManKind();
         jerry.name = "Jerry";
 //        jerry.age = 16;
 //        jerry.earth = "jerry...";
-        System.out.println(jerry.name);
-        System.out.println(jerry.age);
-        System.out.println(ManKind.earth);
+        out.println(jerry.name);
+        out.println(jerry.age);
+        out.println(ManKind.earth);
     }
 }
 

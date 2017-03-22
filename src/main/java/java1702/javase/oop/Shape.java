@@ -30,7 +30,6 @@ class CircleTest extends Shape {
 
     @Override
     public double getArea() {
-        Math math = new Math();
         return pi * Math.pow(radius, 2);
     }
 }
