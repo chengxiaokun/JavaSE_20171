@@ -8,6 +8,8 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.rmi.StubNotFoundException;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Created by mingfei.net@gmail.com
@@ -20,17 +22,23 @@ public class Test {
     private static final String SUFFIX = "</table></body></html>";
 
     public static void main(String[] args) throws IOException {
-        BufferedImage bufferedImage = ImageIO.read(new File("doc/1.jpg"));
+        BufferedImage bufferedImage = ImageIO.read(new File("doc/bw0.gif"));
+        Set<String> strings = new HashSet<>();
         try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("doc/1.html"))) {
-            bufferedWriter.write(PREFIX);
+//            bufferedWriter.write(PREFIX);
             for (int i = 0; i < bufferedImage.getHeight(); i++) {
-                bufferedWriter.write("<tr>");
+//                bufferedWriter.write("<tr>");
                 for (int j = 0; j < bufferedImage.getWidth(); j++) {
-                    bufferedWriter.write(getBackgroundColorStyle(new Color(bufferedImage.getRGB(j, i))));
+//                    bufferedWriter.write(getBackgroundColorStyle(new Color(bufferedImage.getRGB(j, i))));
+                    strings.add(getBackgroundColorStyle(new Color(bufferedImage.getRGB(j, i))));
                 }
-                bufferedWriter.write("</tr>");
+//                bufferedWriter.write("</tr>");
             }
-            bufferedWriter.write(SUFFIX);
+//            bufferedWriter.write(SUFFIX);
+            System.out.println(strings.size());
+            for (String string : strings) {
+                System.out.println(string);
+            }
         }
     }
 
