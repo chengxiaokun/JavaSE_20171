@@ -13,5 +13,19 @@ public class CalendarTest {
 
     public static void main(String[] args) {
         Calendar calendar = Calendar.getInstance();
+
+        int year = 2017;
+
+        /*
+        一月
+        一 二 三 四 五 六 日
+                        1
+        2
+
+          31
+
+        二月
+
+         */
     }
 }
