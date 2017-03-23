@@ -13,9 +13,9 @@ public class CalendarTest {
 
     public static void main(String[] args) {
         Calendar calendar = Calendar.getInstance();
-
-        int year = 2017;
-
+        calendar.set(2017, 0, 8);
+        System.out.println(calendar.getActualMaximum(Calendar.DAY_OF_MONTH)); // actual 实际\ ['æktʃʊəl\;\ -tjʊəl]
+        System.out.println(calendar.get(Calendar.DAY_OF_WEEK));
         /*
         一月
         一 二 三 四 五 六 日
