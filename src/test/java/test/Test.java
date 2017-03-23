@@ -18,23 +18,23 @@ import java.util.Set;
  */
 public class Test {
 
-    private static final String PREFIX = "<html><head><style>table{border-collapse:collapse;}td{padding:0;width:1px;height:1px;}</style></head><body><table>";
+    private static final String PREFIX = "<html><head><style>*{margin:0}i{display:inline-block;width:1px;height:1px;}</style></head><body><table>";
     private static final String SUFFIX = "</table></body></html>";
 
     public static void main(String[] args) throws IOException {
-        BufferedImage bufferedImage = ImageIO.read(new File("doc/bw0.gif"));
+        BufferedImage bufferedImage = ImageIO.read(new File("doc/bw1.jpg"));
         Set<String> strings = new HashSet<>();
-        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("doc/1.html"))) {
-//            bufferedWriter.write(PREFIX);
+        try (BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter("doc/bw1.html"))) {
+            bufferedWriter.write(PREFIX);
             for (int i = 0; i < bufferedImage.getHeight(); i++) {
-//                bufferedWriter.write("<tr>");
+                bufferedWriter.write("<p>");
                 for (int j = 0; j < bufferedImage.getWidth(); j++) {
-//                    bufferedWriter.write(getBackgroundColorStyle(new Color(bufferedImage.getRGB(j, i))));
+                    bufferedWriter.write(getBackgroundColorStyle(new Color(bufferedImage.getRGB(j, i))));
                     strings.add(getBackgroundColorStyle(new Color(bufferedImage.getRGB(j, i))));
                 }
-//                bufferedWriter.write("</tr>");
+                bufferedWriter.write("</p>");
             }
-//            bufferedWriter.write(SUFFIX);
+            bufferedWriter.write(SUFFIX);
             System.out.println(strings.size());
             for (String string : strings) {
                 System.out.println(string);
@@ -43,6 +43,18 @@ public class Test {
     }
 
     private static String getBackgroundColorStyle(Color color) {
-        return "<td style='background:rgb(" + color.getRed() + "," + color.getGreen() + "," + color.getBlue() + ")'></td>";
+        String colorHex = "#" + getHexColor(color.getRed()) + getHexColor(color.getGreen()) + getHexColor(color.getBlue());
+        return "<i style='background:" + colorHex + "'></i>";
+
+    }
+
+    private static String getHexColor(int rgb) {
+        String rawHexString = Integer.toHexString(rgb);
+        String pattern = "(([0-9a-f])\\2){3}";
+        String hexString = (rawHexString.length() == 2) ? rawHexString : "0" + rawHexString;
+        if (hexString.matches(pattern)) {
+            hexString = "" + hexString.charAt(0) + hexString.charAt(2) + hexString.charAt(4);
+        }
+        return hexString;
     }
 }
