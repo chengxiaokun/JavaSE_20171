@@ -30,18 +30,22 @@ public class StaticTest {
 //        tom.name = "Tom";
         tom.age = 18;
         ManKind.earth = "tom 种了一棵树";
+//        ManKind.married = true;
         out.println(tom.name);
         out.println(tom.age);
         out.println(ManKind.earth);
+        out.println(ManKind.married); // true
         out.println("--------------");
 
         ManKind jerry = new ManKind();
         jerry.name = "Jerry";
 //        jerry.age = 16;
 //        jerry.earth = "jerry...";
+        ManKind.married = true;
         out.println(jerry.name);
         out.println(jerry.age);
         out.println(ManKind.earth);
+        out.print(ManKind.married); // false
     }
 }
 
@@ -49,4 +53,5 @@ class ManKind { // 人类只有一个地球
     public String name;
     public int age;
     public static String earth; // 地球
+    public static boolean married;
 }
