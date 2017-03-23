@@ -8,14 +8,20 @@ package java1702.javase.oop;
 // shape 形状\ [ʃeɪp] 三角形 四边形 正方形 矩形 圆型 ...
 
 // 抽象类对其所有的子类做了限制和约束:必须实现抽象类的所有的抽象方法
-public abstract class Shape {
-    public abstract double getPerimeter();
-    public abstract double getArea();
+public interface Shape {
+    double getPerimeter();
+    double getArea();
 }
 
-class CircleTest extends Shape {
-    //    private double x;
-//    private double y;
+interface Color {
+    // ...
+}
+
+interface Position {
+    // ...
+}
+
+class CircleTest implements Shape, Color, Position  {
     private double pi = 3.14;
     private double radius;
 
@@ -34,7 +40,7 @@ class CircleTest extends Shape {
     }
 }
 
-class Triangle extends Shape {
+class Triangle implements Shape {
 
     private double a;
     private double b;
@@ -63,7 +69,7 @@ class Triangle extends Shape {
     }
 }
 
-class Quadrangle extends Shape {
+class Quadrangle implements Shape {
 
     private double a;
     private double b;
@@ -93,7 +99,7 @@ class Quadrangle extends Shape {
     }
 }
 
-class Square extends Shape {
+class Square implements Shape {
     private double length;
 
     public Square(double length) {
@@ -111,7 +117,7 @@ class Square extends Shape {
     }
 }
 
-class Rectangle extends Shape {
+class Rectangle implements Shape {
     private double width;
     private double height;
 

@@ -43,18 +43,19 @@ public class Test {
     }
 
     private static String getBackgroundColorStyle(Color color) {
-        String colorHex = "#" + getHexColor(color.getRed()) + getHexColor(color.getGreen()) + getHexColor(color.getBlue());
-        return "<i style='background:" + colorHex + "'></i>";
-
-    }
-
-    private static String getHexColor(int rgb) {
-        String rawHexString = Integer.toHexString(rgb);
+        String red = Integer.toHexString(color.getRed());
+        red = (red.length() == 2) ? red : "0" + red;
+        String green = Integer.toHexString(color.getGreen());
+        green = (green.length() == 2) ? green : "0" + green;
+        String blue = Integer.toHexString(color.getBlue());
+        blue = (blue.length() == 2) ? blue : "0" + blue;
         String pattern = "(([0-9a-f])\\2){3}";
-        String hexString = (rawHexString.length() == 2) ? rawHexString : "0" + rawHexString;
-        if (hexString.matches(pattern)) {
-            hexString = "" + hexString.charAt(0) + hexString.charAt(2) + hexString.charAt(4);
+        String hexColor = red + green + blue;
+        if (hexColor.matches(pattern)) {
+            hexColor = "" + hexColor.charAt(0) + hexColor.charAt(2) + hexColor.charAt(4);
         }
-        return hexString;
+        hexColor = "#" + hexColor;
+        return "<i style='background:" + hexColor + "'></i>";
+
     }
 }
