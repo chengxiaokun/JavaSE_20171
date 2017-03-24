@@ -24,6 +24,12 @@ public class CalendarTest {
 
           31
 
+
+        patience
+        courage
+        confidence
+        discipline
+        compassion
         二月
 
          */
