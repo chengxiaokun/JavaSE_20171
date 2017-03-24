@@ -5,26 +5,27 @@ package java1702.javase.oop;
  * 3/24/17 08:47
  * JavaSE_20171
  */
+// scope 范围
 public class ScopeTest {
-    // scope 范围
-
-
     public void method() {
-        i = 0;
-
-        int j = 1; // local variable 局部变量
-        System.out.println(j);
-
-        for (int k = 0; k < 10; k++) {
-             j = 2;
-            System.out.println(j);
-        }
-        for (int k = 0; k < 10; k++) {
-        }
-
-
+        int i = 1;
+        System.out.println(this.i);
     }
 
-
     private int i;
+
+    public static void main(String[] args) {
+        ScopeTest scopeTest = new ScopeTest();
+        scopeTest.method();
+    }
+
+    public void exceptionTest() {
+        try {
+            String s = "hello";
+        } catch (Exception e) {
+
+        } finally {
+            s = "hi";
+        }
+    }
 }
