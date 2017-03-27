@@ -7,11 +7,16 @@ package java1702.javase.oop;
  */
 public class Boxed { // 封装类 装箱类
     public static void main(String[] args) {
-//        int i = 0;
-//        double d = 1.2d;
+        int x = 0;
+        int y = 0;
 
-        Integer i = new Integer(0);
-        Double d = new Double(1.2d);
+        System.out.println(x >= y);
+
+        Integer i = new Integer(1); // address1
+        Integer j = new Integer(1); // address2
+
+
+        System.out.println(i == j); // == !=
 
         /*
         java.lang
@@ -25,8 +30,5 @@ public class Boxed { // 封装类 装箱类
             double - Double
 
          */
-
-        System.out.println(i);
-        System.out.println(d);
     }
 }
