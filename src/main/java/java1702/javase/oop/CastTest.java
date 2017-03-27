@@ -23,6 +23,9 @@ public class CastTest {
         String s3 = "" + x + y;
         System.out.println(s3);
 
+        // d.
+        String s4 = Integer.toString(x);
+        System.out.println(s4);
 
 
         // 2.
@@ -36,6 +39,8 @@ public class CastTest {
         int y2 = Integer.parseInt(string); // parse 解析\ [pɑːz]
         System.out.println(y2);
 
-        // c. ?
+        // c.
+        int y3 = new Integer(string);
+        System.out.println(y3);
     }
 }
