@@ -37,7 +37,7 @@ public class Test {
             bufferedWriter.write(SUFFIX);
             System.out.println(strings.size());
             for (String string : strings) {
-                System.out.println(string);
+//                System.out.println(string);
             }
         }
     }
