@@ -10,10 +10,10 @@ public class PrimitiveTest {
     private String s;
 
     // java.lang.String FQN
-    private static void method(PrimitiveTest primitiveTest) { // 值传递
-        System.out.println("b: " + primitiveTest.s); // hello
-        primitiveTest.s = "hi";
-        System.out.println("c: " + primitiveTest.s); // hi
+    private static void method(PrimitiveTest test) { // 值传递
+        System.out.println("b: " + test.s); // hello
+        test.s = "hi";
+        System.out.println("c: " + test.s); // hi
     }
 
     public static void main(String[] args) {
@@ -24,3 +24,15 @@ public class PrimitiveTest {
         System.out.println("d: " + primitiveTest.s); // hello
     }
 }
+/*
+值传递：地址传递
+        形式参数 test -------------------------------|
+                                                    |
+        实际参数 primitiveTest -------------------> address
+
+
+值传递
+        形式参数 j -------------------> address2 0
+                                                |
+        实际参数 i -------------------> address1 0
+ */
