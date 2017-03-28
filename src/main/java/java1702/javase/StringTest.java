@@ -11,7 +11,13 @@ public class StringTest {
         String s1 = "asdf";
 
         char[] chars = {'H', 'e', 'l', 'l', 'o'};
+        String s2 = new String(chars);
 
-        System.out.println(s1); // ""; null
-    }
+        System.out.println(s2);
+
+        for (char c : s2.toCharArray()) {
+            System.out.println(c);
+        }
+
+        String s3 = "Hello"; // hello HELLO
 }
