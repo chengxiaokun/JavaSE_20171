@@ -53,5 +53,22 @@ public class ArrayTest {
         }
 
         int[] monthDays = {31, 28};
+
+        Object[] objects = new Object[10];
+        objects[0] = 1;
+        objects[1] = 1.2;
+        objects[2] = "hello";
+        objects[3] = new ArrayTest(); // FQN@HEX
+
+        for (int i = 0; i < objects.length; i++) {
+            if (i == 5) {
+                System.out.println(objects[i]);
+            }
+        }
+
+        for (Object object : objects) {
+            System.out.println(object);
+        }
+//        itar iterate 迭代\ ['ɪtəreɪt] array
     }
 }
