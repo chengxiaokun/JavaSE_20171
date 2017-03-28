@@ -20,4 +20,5 @@ public class StringTest {
         }
 
         String s3 = "Hello"; // hello HELLO
+    }
 }
