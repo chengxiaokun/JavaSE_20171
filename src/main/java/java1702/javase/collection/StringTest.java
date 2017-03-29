@@ -33,5 +33,37 @@ public class StringTest {
         System.out.println(s.replace(" ", ""));
 
         System.out.println(String.valueOf(123));
+        System.out.println("----------");
+
+        String s1 = "hello";
+        String s2 = new String(s1);//"hello";
+        System.out.println(s1);
+        System.out.println(s2);
+        System.out.println(s1.equals(s2));
+        System.out.println(s1 == s2);
+
+        String s3 = "hello";
+        System.out.println(s1 == s3);
+
+        /*
+        String pool 池\ [puːl] 字符串池
+        s1---
+            |
+        -----------------------
+        |  "hello"   "hello"    |
+        |  "test..." "test" "hi"|
+        -----------------------
+            C memory leak 内存泄露  pointer 指针
+            Java gc garbage collection 垃圾回收机制
+         */
+
+        // immutable 不可变的
+        String string = "test...";
+        System.out.println(string);
+        string = "test";
+        string = "hi";
+        System.out.println(string); // ?
+
+//        System.gc();
     }
 }
