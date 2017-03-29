@@ -74,9 +74,9 @@ public class StringTest {
         System.out.printf("上面价格的指数表示：%e %n", 50*0.85);
         System.out.printf("上面价格的指数和浮点数结果的长度较短的是：%g %n", 50*0.85);
         System.out.printf("上面的折扣是%d%% %n", 85);
-        System.out.printf("字母A的散列码是：%h %n", 'B');
-
-        System.out.println(String.format("%02d", 4000));
+        System.out.printf("字母A的散列码是：%h ", "A");
+        System.out.println("A".hashCode());
+        System.out.println(Integer.toHexString("A".hashCode()));
     }
 
     private static String toLowerCase(String origin) {
