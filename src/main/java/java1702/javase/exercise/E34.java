@@ -13,7 +13,7 @@ import java.util.Random;
 // java.lang.Math  java.util.Random
 // util - utility 实用工具
 
-// 效率比较  分布比较
+// 效率比较  分布比较 Hashtable
 
 // Random 随机
 public class E34 {
