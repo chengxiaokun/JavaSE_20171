@@ -12,7 +12,7 @@ import java.util.Vector;
  * JavaSE_20171
  */
 
-// vector 向量\ ['vektə]
+// vector 向量\ ['vektə] add get iter size capacity setElementAt set remove clear
 public class VectorTest {
     public static void main(String[] args) {
 
@@ -40,6 +40,12 @@ public class VectorTest {
         integers.add(100);
         System.out.println(integers.size());
         System.out.println(integers.capacity());
+        integers.setElementAt(9, 0);
+        integers.setElementAt(99, 1);
+        System.out.println("->" + integers.set(2, 999));
+
+        integers.remove(0);
+        integers.clear();
         for (Integer integer : integers) {
             System.out.println(integer);
         }
