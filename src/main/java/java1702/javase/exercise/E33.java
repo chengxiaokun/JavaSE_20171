@@ -11,7 +11,7 @@ package java1702.javase.exercise;
   1 3 3 1
  1 4 6 4 1
 .........（略）
-数组
+
  */
 public class E33 {
 }
