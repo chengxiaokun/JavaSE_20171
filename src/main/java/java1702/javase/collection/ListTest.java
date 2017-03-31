@@ -7,41 +7,32 @@ import java.util.*;
  * 3/31/17 11:28
  * JavaSE_20171
  */
-public class ListTest extends ArrayList {
+public class ListTest {
     public static void main(String[] args) {
-//        Iterable 可迭代的
-//        Collection 集合
-//        List 列表
-//        Set 集合
-//        Map 映射
-//        Vector
-
-        ArrayList<String> arrayList = new ArrayList<>();
-        arrayList.add("hi");
-        arrayList.add("hello");
-        arrayList.add("hello");
-        System.out.println(arrayList.size());
-        System.out.println(arrayList.get(0));
-        System.out.println(arrayList.contains("hello"));
-        System.out.println(arrayList.indexOf("hello"));
-        System.out.println(arrayList.lastIndexOf("hello"));
-        System.out.println(arrayList.remove(1));
-        System.out.println(arrayList.get(1));
-        System.out.println(arrayList.set(1, "test"));
-        System.out.println(arrayList.isEmpty());
-//        arrayList.clear();
-        System.out.println(arrayList.isEmpty());
-        System.out.println("--->" + arrayList);
-        Object[] objects = arrayList.toArray();
-
-        ListTest listTest = new ListTest();
-        for (int i = 0; i < 10; i++) {
-            listTest.add("" + i);
-        }
-        listTest.removeRange(3, 5);
-        for (Object o : listTest) {
-//            System.out.println(o);
-        }
-
+        // array 数组\ [ə'reɪ]
+        // list 列表\ [lɪst]
+        ArrayList<String> strings = new ArrayList<>();
+        strings.add("hi");
+        strings.add("hello");
+        strings.add("hello");
+        System.out.println(strings.size());
+        System.out.println(strings.get(1));
+        System.out.println(strings.contains("test"));
+        System.out.println(strings.indexOf("hello"));
+        System.out.println(strings.lastIndexOf("hello"));
+//        strings.clear();
+        System.out.println(strings.isEmpty());
+        System.out.println(strings.remove(1));
+        System.out.println(strings.set(0, "test"));
+        Object[] objects = strings.toArray();
+        strings.add("hello");
+        System.out.println(strings.size()); // 3
+        System.out.println(strings); // [test, hello, hello]
+        ArrayList<String> strings1 = new ArrayList<>();
+        strings1.add("hello");
+        strings1.add("test");
+        strings.removeAll(strings1);
+        System.out.println(strings.size()); // 1
+        System.out.println(strings); // [test]
     }
 }
