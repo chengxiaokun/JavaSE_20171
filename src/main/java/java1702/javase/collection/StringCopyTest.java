@@ -20,7 +20,14 @@ public class StringCopyTest {
 
         // String remove(int index)
 
-        String[] strings = {"a", "b", "c", "d", null, null, null, null, null, null};
-        System.arraycopy(strings, 0, strings, 0, 0);
+        String[] strings = {"a", "b", "c", "d", "e", null, null, null, null, null};
+        // index = 2  size = 5
+        // srcPos : index + 1
+        // length : size - index -1
+        // destPos : index
+//        System.arraycopy(strings, index + 1, strings, index, size-index-1);
+//        strings[size - 1] = null; // size
+        System.out.println(Arrays.toString(strings));
+        // {"a", "b", "d", "e", null, null, null, null, null, null};
     }
 }

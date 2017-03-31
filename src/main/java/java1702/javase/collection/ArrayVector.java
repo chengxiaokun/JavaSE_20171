@@ -1,5 +1,6 @@
 package java1702.javase.collection;
 
+import java.util.Arrays;
 import java.util.Vector;
 
 /**
@@ -51,18 +52,25 @@ public class ArrayVector { // 使用数组来模拟一个向量 DynamicArray
         return capacity;
     }
 
-    public static void main(String[] args) {
-        // String remove(int index)
-        // String set(int index, String element)
-        ArrayVector arrayVector = new ArrayVector(2);
-        arrayVector.add("hello");
-        arrayVector.add("hi");
-        System.out.println(arrayVector.size());
-        System.out.println(arrayVector.capacity());
+    public String remove(int index) {
+        if (index >= size) {
+            System.out.println("error.");
+            System.exit(0);
+        }
+        String s = strings[index];
+        System.arraycopy(strings, index + 1, strings, index, size - index - 1);
+        strings[size - 1] = null;
+        size--;
+        return s;
     }
 
-    /*
-         |-----10------|
-         |----------20----------|
-     */
+    public String set(int index, String element) {
+        if (index >= size) {
+            System.out.println("error.");
+            System.exit(0);
+        }
+        String s = strings[index];
+        strings[index] = element;
+        return s;
+    }
 }
