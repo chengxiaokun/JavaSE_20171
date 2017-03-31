@@ -29,10 +29,14 @@ public class ListTest {
         System.out.println(strings.size()); // 3
         System.out.println(strings); // [test, hello, hello]
         ArrayList<String> strings1 = new ArrayList<>();
-        strings1.add("hello");
-        strings1.add("test");
         strings.removeAll(strings1);
-        System.out.println(strings.size()); // 1
         System.out.println(strings); // [test]
+        System.out.println(strings.size()); // 3
+        strings.trimToSize();
+        System.out.println(strings.size()); // 3
+
+
+        List<String> strings2 = strings.subList(1, 2); // ?
+        System.out.println(strings2);
     }
 }
