@@ -15,19 +15,35 @@ public class Human {
 
 // constructor
 
-    public void study() {
-
+    // void adj.\ 空的；无效的；无人的
+    public String study(int studyTime) { // call method; 调用\ [kɔːl] invoke method 调用\ [ɪn'vəʊk]
+        // ...
+        System.out.println(name + "学习了 " + studyTime + "小时。");
+        return "一份英语作业";
     }
 
-    public void work() {
+    public void work(boolean b) {
+        if (b) {
+            // ...
+            return;
+        }
+        // ...
+        // ...
+        // ...
+        // ...
+        // ...
+        if (b) {
 
+        } else {
+
+        }
     }
 
-    public void eat() {
-
+    public void eat(String foods, double amount) { // 形式参数 形参
+        System.out.println(name + "吃了" + amount + foods);
     }
 
-    public void sleep() {
-
+    public int sleep(boolean isPlayGame) {
+        return isPlayGame ? 1 : 8;
     }
 }
