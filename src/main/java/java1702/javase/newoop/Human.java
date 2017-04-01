@@ -19,6 +19,7 @@ public class Human {
 //    public Human() {
 //    }
 
+    // Alt + Insert
     public Human(String name, char gender, int age, double height, double weight) {
         this.name = name;
         this.gender = gender;
@@ -28,12 +29,19 @@ public class Human {
     }
 
     public static void main(String[] args) {
+        String s = new String("hello"); // hello
+
         Human human = new Human("Tom", 'M', 18, 1.7, 65); // 实际参数 实参
         System.out.println(human.name); // null
         System.out.println(human.gender); // 0 - ascii
         System.out.println(human.age); // 0
         System.out.println(human.height); // 0.0
         System.out.println(human.weight);
+
+        human.eat("米饭", 4d); //
+        System.out.println(human.sleep(true));
+        System.out.println(human.study(3));
+        human.work(false);
     }
 
     // void adj.\ 空的；无效的；无人的

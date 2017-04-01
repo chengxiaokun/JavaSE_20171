@@ -36,7 +36,8 @@ public class ListTest {
         System.out.println(strings.size()); // 3
 
 
-        ArrayList<String> strings2 = (ArrayList<String>) strings.subList(1, 2); // ?
+        List<String> strings2 = strings.subList(1, 2); // ?
+        // http://stackoverflow.com/a/16644841/3414180
         System.out.println(strings2);
     }
 }
