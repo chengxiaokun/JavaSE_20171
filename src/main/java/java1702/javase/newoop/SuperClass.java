@@ -6,8 +6,9 @@ package java1702.javase.newoop;
 public class SuperClass {
     int i;
 
-
-    public SuperClass(){}
+//    public SuperClass(){
+//
+//    }
 
     public SuperClass(int i) {
         this.i = i;
@@ -22,8 +23,10 @@ public class SuperClass {
 class SubClass extends SuperClass {
     private boolean b;
 
-    public SubClass() {
-//        super();
+    public SubClass(int i, boolean b) {
+//        super(); // { }
+        super(i);
+        this.b = b;
         System.out.println("in sub class constructor...");
     }
 
@@ -42,7 +45,7 @@ class Test {
 //        System.out.println(superClass.i); // 1
 //        superClass.method();
 
-        SubClass subClass = new SubClass();
+        SubClass subClass = new SubClass(1,true);
         System.out.println(subClass.i); // 1 2
 //        System.out.println(subClass.getB());
 //        subClass.method();

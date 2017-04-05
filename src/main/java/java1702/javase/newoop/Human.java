@@ -8,7 +8,7 @@ import java.util.Hashtable;
  * JavaSE_20171
  */
 // class = fields + methods (function)
-public class Human {
+public class Human extends Object {
     private String name;
     private char gender;
     private int age;
