@@ -1,5 +1,5 @@
 package java1702.javase.newoop;
-
+// ctrl + alt + o (optimize) SEO search engine optimize
 /**
  * Created by lan on 2017/4/5.
  */
@@ -15,7 +15,7 @@ public class SuperClass {
         System.out.println("in super class constructor...");
     }
 
-    public void method() {
+    void method() {
         System.out.println("method...");
     }
 }
@@ -34,10 +34,13 @@ class SubClass extends SuperClass {
         System.out.println("m...");
     }
 
-    @Override
-    public void method() {
+    public void method(int i) {
         System.out.println("test...");
-        super.method();
+//        super.method();
+    }
+
+    public void method() {
+//        super.method();
     }
 
     public boolean getB() {
@@ -49,12 +52,15 @@ class Test {
     public static void main(String[] args) {
         SuperClass superClass = new SuperClass(1);
 //        System.out.println(superClass.i); // 1
-        superClass.method();
+//        superClass.method();
 
         SubClass subClass = new SubClass(1,true);
 //        System.out.println(subClass.i); // 1 2
 //        System.out.println(subClass.getB());
         subClass.method();
+        subClass.method(1);
 //        subClass.m();
+
+
     }
 }
