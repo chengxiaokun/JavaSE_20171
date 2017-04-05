@@ -53,7 +53,8 @@ class Test {
         SuperClass superClass = new SuperClass(1);
 //        System.out.println(superClass.i); // 1
 //        superClass.method();
-
+        AccessModifierTest accessModifierTest = new AccessModifierTest();
+        System.out.println(accessModifierTest.d);
         SubClass subClass = new SubClass(1,true);
 //        System.out.println(subClass.i); // 1 2
 //        System.out.println(subClass.getB());

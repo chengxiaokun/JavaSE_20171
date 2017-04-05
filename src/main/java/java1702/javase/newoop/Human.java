@@ -1,19 +1,57 @@
 package java1702.javase.newoop;
 
-import java.util.Hashtable;
-
 /**
  * Created by mingfei.net@gmail.com
  * 4/1/17 08:46
  * JavaSE_20171
  */
 // class = fields + methods (function)
-public class Human extends Object {
+public class Human extends Object { //  实体类 entity 模型类 model
     private String name;
     private char gender;
     private int age;
     private double height;
     private double weight;
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public char getGender() {
+        return gender;
+    }
+
+    public void setGender(char gender) {
+        this.gender = gender;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    public void setHeight(double height) {
+        this.height = height;
+    }
+
+    public double getWeight() {
+        return weight;
+    }
+
+    public void setWeight(double weight) {
+        this.weight = weight;
+    }
 
     // constructor
 //    public Human() {

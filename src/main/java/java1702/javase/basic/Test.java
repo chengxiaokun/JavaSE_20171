@@ -1,5 +1,6 @@
 package java1702.javase.basic;
 
+import java1702.javase.newoop.AccessModifierTest;
 import java1702.javase.oop.DefaultClass;
 import java1702.javase.oop.NewSuperClass;
 import java1702.javase.oop.SubClass;
@@ -10,6 +11,10 @@ import java1702.javase.oop.SubClass;
 
 public class Test extends DefaultClass {
     public static void main(String[] args) {
+        AccessModifierTest accessModifierTest = new AccessModifierTest();
+//        System.out.println(accessModifierTest.b);
+        Test test = new Test();
+        System.out.println(test.b);
 //        Human tom = new Human(); // 【new + 一个类的构造方法】 对象 实例 实例对象 object instance
 //        System.out.println(tom.name); // name null
 //
@@ -26,8 +31,8 @@ public class Test extends DefaultClass {
 //        System.out.println(defaultClass.i); // 0
 //        defaultClass.method();
 
-        Test test = new Test();
-        test.method();
+//        Test test = new Test();
+//        test.method();
 
     }
 }

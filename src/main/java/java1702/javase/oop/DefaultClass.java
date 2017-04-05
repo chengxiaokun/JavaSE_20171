@@ -1,12 +1,13 @@
 package java1702.javase.oop;
 
 import java1702.javase.exercise.E2;
+import java1702.javase.newoop.AccessModifierTest;
 
 /**
  * Created by mingfei.net@gmail.com
  * 3/20/17 08:48
  */
-public class DefaultClass {
+public class DefaultClass extends AccessModifierTest {
     // Alt + Insert / Command + N
 
     // private default protected public
