@@ -34,6 +34,12 @@ class SubClass extends SuperClass {
         System.out.println("m...");
     }
 
+    @Override
+    public void method() {
+        System.out.println("test...");
+        super.method();
+    }
+
     public boolean getB() {
         return b;
     }
@@ -41,14 +47,14 @@ class SubClass extends SuperClass {
 
 class Test {
     public static void main(String[] args) {
-//        SuperClass superClass = new SuperClass();
+        SuperClass superClass = new SuperClass(1);
 //        System.out.println(superClass.i); // 1
-//        superClass.method();
+        superClass.method();
 
         SubClass subClass = new SubClass(1,true);
-        System.out.println(subClass.i); // 1 2
+//        System.out.println(subClass.i); // 1 2
 //        System.out.println(subClass.getB());
-//        subClass.method();
+        subClass.method();
 //        subClass.m();
     }
 }
