@@ -11,12 +11,11 @@ import static java.lang.System.out; // JDK 1.5
  */
 
 // class = fields + methods
-public class Mankind {
+public class Mankind implements Swim, Fly {
+    // 面向接口 架构师
     // static 静态 ; dynamic 动态\ [daɪ'næmɪk]
 
     private static final int ONE_TWO_THREE = 123; // 常量
-
-
 
     public Mankind(String name) {
         System.out.println(name + " constructor...");
@@ -26,11 +25,34 @@ public class Mankind {
         System.out.println("static block...");
     }
 
+    @Override
+    public void swimming() {
+        System.out.println("...");
+    }
+
+    @Override
+    public void flying() {
+        System.out.println("...");
+    }
+
     class A {} // Inner class 内部类
 
     String name;
     static String earth; // 地球
+
+    public void study() {
+        System.out.println(name + " is studying...");
+    }
 }
+
+interface Swim {
+    void swimming();
+}
+
+interface Fly {
+    void flying();
+}
+
 
 class NewTest {
 
@@ -53,5 +75,8 @@ class NewTest {
 //        out.println(Mankind.earth);
 
 //        out.println(Math.pow(2, 31));
+
+        Swim swimmer = new Mankind("Zhangsan");
+        swimmer.swimming();
     }
 }
