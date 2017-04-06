@@ -19,10 +19,15 @@ public class Bike extends Vehicle {
         System.out.println("bike: " + getName() + " stopped.");
     }
 
+    public void testBike() {
+
+    }
+
     public static void main(String[] args) {
         Vehicle bike = new Bike("Jerry's bike", 10d, "white");
         bike.run();
         bike.stop();
         bike.info();
+//        bike.testBike();
     }
 }
