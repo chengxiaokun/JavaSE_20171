@@ -62,8 +62,13 @@ public class StringTest {
 //toCharArray
         System.out.println(Arrays.toString("test1".toCharArray()));
 //toLowerCase
+        System.out.println("Hello".toLowerCase());
 //toUpperCase
+        System.out.println("Hello".toUpperCase());
 //trim
+        System.out.println("   test1 hello     ".trim()); // trim
 //valueOf
+        System.out.println(String.valueOf(true));
+        System.out.println(String.valueOf(new char[]{'t', 'e', 's', 't'}));
     }
 }
