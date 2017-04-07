@@ -7,16 +7,30 @@ package java1702.javase.newoop;
  */
 public class ParameterPassTest {
 
-    private static void test(int x) { // 形参
-        System.out.println("b: " + x); // 0
-        x++;
-        System.out.println("c: " + x); // 1
+    private String s;
+
+    private static void test(ParameterPassTest x) { // 形参
+        System.out.println("b: " + x.s); // null
+        x.s = "hello";
+        System.out.println("c: " + x.s); // hello
     }
 
     public static void main(String[] args) {
-        int i = 0;
-        System.out.println("a: " + i); // 0
-        test(i); // 实参
-        System.out.println("d: " + i); // 0
+        ParameterPassTest parameterPassTest = new ParameterPassTest();
+        System.out.println("a: " + parameterPassTest.s); // null
+        test(parameterPassTest); // 实参
+        System.out.println("d: " + parameterPassTest.s); // ?
     }
 }
+
+/*
+hi
+hi
+hello
+hi
+
+   101  102 103 104
+---------------------
+|      | | |     |
+---------------------
+ */
