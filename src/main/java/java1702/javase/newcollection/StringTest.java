@@ -1,5 +1,6 @@
 package java1702.javase.newcollection;
 
+import java.util.Arrays;
 import java.util.Calendar;
 
 /**
@@ -33,25 +34,36 @@ public class StringTest {
         "test..."
          */
 
+//charAt
         System.out.println("hello".charAt(4));
+//concat concatenate
+        System.out.println("test1".concat("test2"));
+//contains
+        System.out.println("test1".contains("1"));
+//endsWith
+        System.out.println("test1".endsWith("t2"));
+//equals
+        System.out.println("test1".equals("Test1"));
+        System.out.println("test1".equalsIgnoreCase("Test1"));
+//indexOf
+        System.out.println("test1".indexOf("t")); // 0
+//lastIndexOf
+        System.out.println("test1".lastIndexOf("t")); // 3
+//length
+        System.out.println("test1测试".length());
+//replace
+        System.out.println("tets1".replace("ts", "st"));
+//split
+        System.out.println(Arrays.toString("test1".split("1")));
+//startWith
+        System.out.println("test1".startsWith("tes"));
+//subString
+        System.out.println("test1".substring(1, 4));
+//toCharArray
+        System.out.println(Arrays.toString("test1".toCharArray()));
+//toLowerCase
+//toUpperCase
+//trim
+//valueOf
     }
 }
-/*
-charAt
-concat
-contains
-endsWith
-equals
-indexOf
-lastIndexOf
-length
-replace
-split
-startWith
-subString
-toCharArray
-toLowerCase
-toUpperCase
-trim
-valueOf
- */
