@@ -17,7 +17,7 @@ public class Test {
         int mul = 1;
         for (int i = 0; i < ints.length; i++) {
             for (int j = 0; j < ints[i].length; j++) {
-                System.out.println("input int: "); // ?
+                System.out.println("input int: " + (i * ints[i].length + (j + 1))); // ?
                 ints[i][j] = scanner.nextInt();
                 if (i == j) {
                     sum += ints[i][j];

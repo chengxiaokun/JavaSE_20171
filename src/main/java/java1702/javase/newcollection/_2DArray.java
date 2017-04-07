@@ -17,20 +17,29 @@ public class _2DArray {
                 {""}
         };
 
-        int[][] ints = new int[5][];
-        ints[0] = new int[2];
-        // ...
-        ints[4] = new int[1];
-
+        int k = 0;
         for (int i = 0; i < strings.length; i++) {
             for (int j = 0; j < strings[i].length; j++) {
-                System.out.print(strings[i][j] + "\t");
+//                k += i * strings[i].length + j + 1; // ?
+                System.out.println(++k);
+//                System.out.println((i * strings.length + (j + 1))); // ?
             }
-            System.out.println();
         }
 
-        System.out.println(strings[strings.length - 1][strings[strings.length - 1].length - 1]);
-
-        System.out.println(Arrays.deepToString(strings));
+//        int[][] ints = new int[5][];
+//        ints[0] = new int[2];
+//        // ...
+//        ints[4] = new int[1];
+//
+//        for (int i = 0; i < strings.length; i++) {
+//            for (int j = 0; j < strings[i].length; j++) {
+//                System.out.print(strings[i][j] + "\t");
+//            }
+//            System.out.println();
+//        }
+//
+//        System.out.println(strings[strings.length - 1][strings[strings.length - 1].length - 1]);
+//
+//        System.out.println(Arrays.deepToString(strings));
     }
 }

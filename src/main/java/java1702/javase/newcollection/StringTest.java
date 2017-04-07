@@ -32,6 +32,8 @@ public class StringTest {
         String Pool 字符串池
         "test..."
          */
+
+        System.out.println("hello".charAt(4));
     }
 }
 /*
