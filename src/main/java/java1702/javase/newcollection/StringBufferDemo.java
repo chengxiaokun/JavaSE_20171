@@ -16,5 +16,10 @@ public class StringBufferDemo {
         System.out.println(stringBuffer.reverse()); // 逆序
         stringBuffer.reverse().setCharAt(0, 'H');
         System.out.println(stringBuffer);
+
+        StringBuffer stringBuffer1 = new StringBuffer();
+        stringBuffer1.append("hello");
+        stringBuffer1.append(" world");
+        System.out.println(stringBuffer1.capacity());
     }
 }
