@@ -15,11 +15,12 @@ public class StringBufferTest {
 //        StringBuffer stringBuffer = new StringBuffer(s);
 //        String s1 = stringBuffer.toString();
 
+        // append prepend 123123  123123
         String s = "";
         StringBuffer stringBuffer = new StringBuffer(); // "123"
         long start = System.currentTimeMillis();
         for (int i = 0; i < 100000; i++) {
-//            s += ONE_TWO_THREE;
+//            s += ONE_TWO_THREE; // s = s + ONE_TWO_THREE
             stringBuffer.append(ONE_TWO_THREE);
         }
         System.out.println(System.currentTimeMillis() - start);
