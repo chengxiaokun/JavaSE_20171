@@ -36,5 +36,11 @@ public class HashtableTest {
         for (Map.Entry<Integer, String> integerStringEntry : hashtable.entrySet()) {
             System.out.println(integerStringEntry.getKey() + "->" + integerStringEntry.getValue());
         }
+
+        System.out.println(hashtable.toString());
+
+        System.out.println(hashtable.containsKey(2));
+        System.out.println(hashtable.containsValue("hi")); // JDK 1.2
+        System.out.println(hashtable.contains("test")); // JDK 1.0
     }
 }
