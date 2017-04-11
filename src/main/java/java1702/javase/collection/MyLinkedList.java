@@ -21,24 +21,39 @@ public class MyLinkedList {
         myLinkedList.add("c");
         System.out.println(myLinkedList.first());
         System.out.println(myLinkedList.last());
-        System.out.println(myLinkedList.get(2));
+        System.out.println(myLinkedList.get(1));
         System.out.println(myLinkedList.size());
-        myLinkedList.remove(1); // [a, c]
+        myLinkedList.remove(0); // [a, c]
+        System.out.println(myLinkedList.size()); // 2
+        System.out.println(myLinkedList.get(0)); // c
     }
 
     public String remove(int index) {
-        // TODO: 4/11/17
-        return null;
+        Node node = getNode(index);
+        String element = node.element;
+        Node prev = node.prev;
+        Node next = node.next;
+        if (prev == null) {
+            next = first;
+            node.next = null;
+        }
+        if (next == null) {
+            prev = last;
+            node.prev = null;
+        }
+        node.element = null;
+        size--;
+        return element;
     }
 /*
-   ----------[0]---[1]---[2]---[?].............[n?]
+   [0]---[1]---[2]---[?].............[n?]
  */
 
     public int size() {
         return size;
     }
 
-    public String get(int index) {
+    private Node getNode(int index) {
         if (index < 0 || index >= size) {
             System.out.println("error.");
             System.exit(0);
@@ -47,7 +62,11 @@ public class MyLinkedList {
         for (int i = 0; i < index; i++) {
             node = node.next;
         }
-        return node.element;
+        return node;
+    }
+
+    public String get(int index) {
+        return getNode(index).element;
     }
 
     public boolean add(String element) {
