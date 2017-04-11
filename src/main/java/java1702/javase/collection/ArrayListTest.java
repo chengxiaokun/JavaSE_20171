@@ -20,7 +20,7 @@ public class ArrayListTest {
 // [a, c]
         System.out.println(strings1.equals(strings2));
 
-        List<String> strings3 = new ArrayList<>(strings2.subList(1, 3));
+        List<String> strings3 = new ArrayList<>(strings2.subList(1, 3)); // view 视图
         System.out.println(strings3);
 
         System.out.println(strings3.containsAll(strings1));
@@ -29,7 +29,9 @@ public class ArrayListTest {
         System.out.println(strings2);
 
         // retain 保留\ [rɪ'teɪn]
-        strings3.retainAll(strings2); // [b, c] [a]
+        // concurrent 并发\ [kən'kʌr\(ə\)nt]
+        // modification 修改\ [,mɒdɪfɪ'keɪʃ\(ə\)n]
+        strings3.retainAll(strings2); // [b, c] [a, b, c]
         System.out.println(strings3);
     }
 }
