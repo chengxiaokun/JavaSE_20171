@@ -15,17 +15,19 @@ public class MyLinkedList {
     }
 
     public static void main(String[] args) {
+
         MyLinkedList myLinkedList = new MyLinkedList();
         myLinkedList.add("a");
         myLinkedList.add("b");
         myLinkedList.add("c");
-        System.out.println(myLinkedList.first());
-        System.out.println(myLinkedList.last());
-        System.out.println(myLinkedList.get(1));
-        System.out.println(myLinkedList.size());
-        myLinkedList.remove(0); // [a, c]
-        System.out.println(myLinkedList.size()); // 2
-        System.out.println(myLinkedList.get(0)); // c
+//        System.out.println(myLinkedList.first());
+//        System.out.println(myLinkedList.last());
+//        System.out.println(myLinkedList.get(1));
+//        System.out.println(myLinkedList.size());
+//        myLinkedList.remove(1);
+//        myLinkedList.remove(1);
+//        myLinkedList.remove(0);
+        System.out.println(myLinkedList); // c
     }
 
     public String remove(int index) {
@@ -33,21 +35,45 @@ public class MyLinkedList {
         String element = node.element;
         Node prev = node.prev;
         Node next = node.next;
-        if (prev == null) {
-            next = first;
+        if (prev == null && next == null) {
+            node.element = null;
+        } else if (prev == null) {
+            first = next;
+            next.prev = null;
             node.next = null;
-        }
-        if (next == null) {
-            prev = last;
+            node.element = null;
+        } else if (next == null) {
+            last = prev;
+            prev.next = null;
             node.prev = null;
+            node.element = null;
+        } else {
+            prev.next = next;
+            next.prev = prev;
+            node.prev = null;
+            node.next = null;
+            node.element = null;
         }
-        node.element = null;
         size--;
         return element;
     }
 /*
    [0]---[1]---[2]---[?].............[n?]
  */
+
+    @Override
+    public String toString() {
+        String s = "[";
+        for (int i = 0; i < size; i++) {
+            String element = get(i);
+            s += element;
+            if (i != size - 1) {
+                s += ", ";
+            }
+        }
+        s += "]";
+        return s;
+    }
 
     public int size() {
         return size;
