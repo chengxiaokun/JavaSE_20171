@@ -20,7 +20,7 @@ public class ArrayListTest {
 // [a, c]
         System.out.println(strings1.equals(strings2));
 
-        List<String> strings3 = strings2.subList(1, 3);
+        List<String> strings3 = new ArrayList<>(strings2.subList(1, 3));
         System.out.println(strings3);
 
         System.out.println(strings3.containsAll(strings1));
@@ -29,7 +29,7 @@ public class ArrayListTest {
         System.out.println(strings2);
 
         // retain 保留\ [rɪ'teɪn]
-        strings3.retainAll(strings2);
+        strings3.retainAll(strings2); // [b, c] [a]
         System.out.println(strings3);
     }
 }
