@@ -14,8 +14,10 @@ public class LinkedListTest {
         strings.add("a");
         strings.add("b");
 
-        System.out.println(strings.size());
-        System.out.println(strings.get(0));
+        strings.remove(0);
+
+        System.out.println(strings.size()); // 1
+        System.out.println(strings.get(0)); // ?
 
         for (String string : strings) {
             System.out.println(string);
