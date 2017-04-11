@@ -7,18 +7,37 @@ package java1702.javase.collection;
  */
 public class MyLinkedList {
 
+    private Node first;
+    private Node last;
+
     public MyLinkedList() {
     }
 
     public static void main(String[] args) {
         MyLinkedList myLinkedList = new MyLinkedList();
         myLinkedList.add("a");
+        myLinkedList.add("b");
+        System.out.println(myLinkedList.first());
+        System.out.println(myLinkedList.last());
     }
 
     public boolean add(String element) {
-        // TODO: 4/11/17
+        if (first == null) {
+            Node node = new Node(element, null, null);
+            first = node;
+            last = node;
+        } else {
 
+        }
         return true;
+    }
+
+    public String first() {
+        return first.element;
+    }
+
+    public String last() {
+        return last.element;
     }
 
     private class Node { // node 节点\ [nəʊd]
